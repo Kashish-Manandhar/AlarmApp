@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddAlarm"
+    android:background="@drawable/background"
+
+    >
+
+
+    <TimePicker
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:timePickerMode="spinner"
+        android:id="@+id/clock"
+        android:layout_margin="12dp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter the name of your event"
+        android:layout_margin="12dp"
+        android:paddingTop="3dp"
+        android:id="@+id/alarmnameET"
+        android:layout_below="@id/clock"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/alarmnameET"
+        android:id="@+id/layout_cal"
+        android:orientation="horizontal"
+        android:layout_alignParentRight="true">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/calendar"
+            android:layout_gravity="center"
+            android:id="@+id/img_cal"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:text="Set your date"
+            android:padding="3dp"
+            />
+    </LinearLayout>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_cal"
+            android:id="@+id/repeat"
+            android:text="Repeat"
+            android:cursorVisible="true"
+            />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/repeat"
+        android:id="@+id/days"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true">
+        <ToggleButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/sun"
+            android:layout_weight="1"
+            android:textOn="S"
+            android:textOff="S"
+            android:background="@drawable/toogle_btn"
+            android:layout_marginLeft="2dp"/>
+        <ToggleButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/mon"
+            android:text="M"
+            android:layout_weight="1"
+            android:textOn="M"
+            android:textOff="M"
+            android:background="@drawable/toogle_btn"
+            android:layout_marginLeft="2dp"/>
+        <ToggleButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/tues"
+            android:text="Tue"
+            android:layout_weight="1"
+            android:textOn="Tue"
+            android:textOff="Tue"
+            android:background="@drawable/toogle_btn"
+            android:layout_marginLeft="2dp"/>
+        <ToggleButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="2dp"
+            android:id="@+id/wed"
+            android:text="W"
+            android:layout_weight="1"
+            android:textOn="Wed"
+            android:textOff="Wed"
+            android:background="@drawable/toogle_btn"/>
+        <ToggleButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/thurs"
+            android:text="Thu"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:textOn="THU"
+            android:textOff="THU"
+            android:background="@drawable/toogle_btn"/>
+        <ToggleButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/fri"
+            android:text="F"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:textOn="F"
+            android:textOff="F"
+            android:background="@drawable/toogle_btn"/>
+
+        <ToggleButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/sat"
+            android:layout_marginLeft="2dp"
+            android:text="Sat"
+            android:layout_weight="1"
+            android:textOn="Sat"
+            android:textOff="Sat"
+            android:background="@drawable/toogle_btn"/>
+
+
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/days"
+        android:id="@+id/save"
+        android:text="Save"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_centerHorizontal="true"
+        android:background="#FE4312"
+        android:textColor="#FFFFFF"
+        />
+
+</RelativeLayout>
